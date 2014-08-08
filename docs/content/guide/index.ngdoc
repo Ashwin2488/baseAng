@@ -1,0 +1,43 @@
+@ngdoc overview
+@name Guide
+@description
+
+# Yeoman proAngular generator
+Yeoman generator for AngularJs skeleton with recommended folder structure.
+
+## Features
+
+- Scaffolds [google recommended app structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub) for scalable AngularJs application
+  <img class="diagram" src="img/tutorial/folder-structure.png" width="488" height="413" alt="App structure">	
+  
+- A common config file to manage your service URLS ,app version,release mode,app specific global configurations
+<pre>
+{
+  "app": {
+    "version": "0.0.1",
+    "mode": "staging",
+    "name": "proAngular",
+    "lang": "es",
+    "staging": {
+      "serviceUrl": "",
+      "pollInterval": "",
+      "serviceTimeout": ""
+    },
+    "production": {
+      "serviceUrl": "",
+      "pollInterval": "",
+      "serviceTimeout": ""
+    }
+  },
+  "services": {
+    "matchList": "http://mdw.prokarma.com/mockservice/serviceresponse.php?serviceurl=5c9559744cd231fbc7bc58cce2f08d26",
+  }
+}
+
+</pre>
+- Jasmine unit test integrated with karma runner.
+- code coverage for unit tests to identify untested and unused code in your application
+  <img class="diagram" src="img/tutorial/code-coverage.png" width="488" height="413" alt="code coverage">	
+
+
+

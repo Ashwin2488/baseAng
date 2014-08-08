@@ -1,0 +1,71 @@
+@ngdoc overview
+@name Adding a Module
+@description
+
+#Adding a new Module
+So now the project base is setup ,what about adding some extra functionalities to it.
+To add a new module to your application,the things need to be done are as follows.But if you 
+want to make sure everything is perfect so far and want to run your application you can skip to [Running your app](#/running_app).
+
+
+Say you are going to add a new module as `page3`
+
+- Create a new sub-directory as page3 inside modules folder.
+
+```
+modules
+	home/
+		home.tpl.html
+		home-controller.js
+		home-controller_test.js
+		home-service.js
+	page1/
+		........
+		........
+	page2/
+		........
+		........
+	**page3/**	
+app.js
+app.css
+index.html	
+
+```
+- Create a file called page3-controller.js.
+  Define your module and add a controller in it.
+  <pre>
+	angular.module('page3',[])
+	.controller('Page1Ctrl', function ($scope,$rootScope) {
+          
+    });
+	</pre>
+	
+- Now add a template file `page3.tpl.html` with the html content for your module.
+	<pre>
+	<div>Page3 content</div>
+	</pre>
+	
+- Next you will have to configure the route for your page3 view.
+
+	<pre>
+	angular.module('page3',[])
+	.config(function ($routeProvider) {
+        $routeProvider.when('/page3', {  //your url destination here
+           templateUrl: 'scripts/modules/page3/page3.tpl.html', 
+           controller: 'Page3Ctrl'
+        });
+    })
+    .controller('Page1Ctrl', function ($scope,$rootScope) {
+          
+    });
+    
+	</pre>
+	
+- We are almost done creating the module.Now to see it in action [run the app](#/runing_app) and navigate to http://localhost:9001/#/page3
+
+<div class="alert alert-info">
+**grunt-injector:** You might think of adding the page3-controller.js file in your index.html before running the app.
+A grunt task called injector does it for you.All your css and js files are automatically added to it.
+</div>		
+	
+		

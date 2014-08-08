@@ -1,0 +1,45 @@
+@ngdoc overview
+@name Application structure
+@description
+
+#Angular structure guideline
+
+###Grouping the application into logical units
+
+ We group the components,sub-sections of the application into logical units under the modules folder.
+ Each component may contain module definition,services,directives,html css files or filters specific to it.
+ Each component may have sub section with the same structure as the components depending upon the complexity of the UI.
+ 
+```
+modules
+	home/
+		home.tpl.html
+		home-controller.js
+		home-controller_test.js
+		home-service.js
+	page1/
+		........
+		........
+	page2/
+		........
+		........
+app.js
+app.css
+index.html
+				
+``` 
+###Naming conventions
+We also have to follow some naming conventions that would be helpfull to easily maintain the app when it scales.
+Google recommended naming conventions for angular app are as follows
+
+- Each filename should describe the file's purpose by including the component or view sub-section 
+  that it's in, and the type of object that it is as part of the name. For example, a datepicker directive 
+  would be in components/datepicker/datepicker-directive.js.
+  
+- Controllers, Directives, Services, and Filters, should include controller, directive, service, and filter in their name.
+
+- File names should be lowercase, following the existing JS Style recommendations. HTML and css files should also be lowercase.
+
+- Unit tests should be named ending in _test.js, hence  "foo-controller_test.js" and "bar-directive_test.js"
+ 
+For more detailed proposed structure [here](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)

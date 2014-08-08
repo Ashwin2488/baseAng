@@ -1,0 +1,41 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="application-structure-page"><h2 id="angular-structure-guideline">Angular structure guideline</h2>
+<h4 id="angular-structure-guideline_grouping-the-application-into-logical-units">Grouping the application into logical units</h4>
+<p> We group the components,sub-sections of the application into logical units under the modules folder.
+ Each component may contain module definition,services,directives,html css files or filters specific to it.
+ Each component may have sub section with the same structure as the components depending upon the complexity of the UI.</p>
+<pre><code>modules
+    home/
+        home.tpl.html
+        home-controller.js
+        home-controller_test.js
+        home-service.js
+    page1/
+        ........
+        ........
+    page2/
+        ........
+        ........
+app.js
+app.css
+index.html</code></pre>
+<h4 id="angular-structure-guideline_naming-conventions">Naming conventions</h4>
+<p>We also have to follow some naming conventions that would be helpfull to easily maintain the app when it scales.
+Google recommended naming conventions for angular app are as follows</p>
+<ul>
+<li><p>Each filename should describe the file&#39;s purpose by including the component or view sub-section 
+that it&#39;s in, and the type of object that it is as part of the name. For example, a datepicker directive 
+would be in components/datepicker/datepicker-directive.js.</p>
+</li>
+<li><p>Controllers, Directives, Services, and Filters, should include controller, directive, service, and filter in their name.</p>
+</li>
+<li><p>File names should be lowercase, following the existing JS Style recommendations. HTML and css files should also be lowercase.</p>
+</li>
+<li><p>Unit tests should be named ending in _test.js, hence  &quot;foo-controller_test.js&quot; and &quot;bar-directive_test.js&quot;</p>
+</li>
+</ul>
+<p>For more detailed proposed structure <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">here</a></p>
+</div></div>

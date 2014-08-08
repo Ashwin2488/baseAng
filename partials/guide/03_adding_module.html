@@ -1,0 +1,66 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="adding-a-module-page"><h2 id="adding-a-new-module">Adding a new Module</h2>
+<p>So now the project base is setup ,what about adding some extra functionalities to it.
+To add a new module to your application,the things need to be done are as follows.But if you 
+want to make sure everything is perfect so far and want to run your application you can skip to <a href="#/running_app">Running your app</a>.</p>
+<p>Say you are going to add a new module as <code>page3</code></p>
+<ul>
+<li>Create a new sub-directory as page3 inside modules folder.</li>
+</ul>
+<pre><code>modules
+    home/
+        home.tpl.html
+        home-controller.js
+        home-controller_test.js
+        home-service.js
+    page1/
+        ........
+        ........
+    page2/
+        ........
+        ........
+    **page3/**    
+app.js
+app.css
+index.html</code></pre>
+<ul>
+<li><p>Create a file called page3-controller.js.
+Define your module and add a controller in it.
+<pre class="prettyprint linenums">
+	angular.module('page3',[])
+	.controller('Page1Ctrl', function ($scope,$rootScope) {
+          
+    });
+	</pre>
+</li>
+<li><p>Now add a template file <code>page3.tpl.html</code> with the html content for your module.
+  <pre class="prettyprint linenums">
+	&lt;div&gt;Page3 content&lt;/div&gt;
+	</pre>
+</li>
+<li><p>Next you will have to configure the route for your page3 view.</p>
+<p>  <pre class="prettyprint linenums">
+	angular.module('page3',[])
+	.config(function ($routeProvider) {
+        $routeProvider.when('/page3', {  //your url destination here
+           templateUrl: 'scripts/modules/page3/page3.tpl.html', 
+           controller: 'Page3Ctrl'
+        });
+    })
+    .controller('Page1Ctrl', function ($scope,$rootScope) {
+          
+    });
+    
+	</pre>
+</li>
+<li><p>We are almost done creating the module.Now to see it in action <a href="#/runing_app">run the app</a> and navigate to <a href="http://localhost:9001/#/page3">http://localhost:9001/#/page3</a></p>
+</li>
+</ul>
+<div class="alert alert-info">
+<strong>grunt-injector:</strong> You might think of adding the page3-controller.js file in your index.html before running the app.
+A grunt task called injector does it for you.All your css and js files are automatically added to it.
+</div>        
+</div></div>

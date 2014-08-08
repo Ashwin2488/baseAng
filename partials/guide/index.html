@@ -1,0 +1,42 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="guide-page"><h2 id="pro-angular-skeleton">Pro Angular Skeleton</h2>
+<p>AngularJs skeleton with recommended folder structure.</p>
+<h3 id="pro-angular-skeleton_features">Features</h3>
+<ul>
+<li><p>Scaffolds <a href="https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub">google recommended app structure</a> for scalable AngularJs application
+<img class="diagram" src="img/tutorial/folder-structure.png" width="488" height="413" alt="App structure">    </p>
+</li>
+<li><p>A common config file to manage your service URLS ,app version,release mode,app specific global configurations
+<pre class="prettyprint linenums">
+{
+  "app": {
+    "version": "0.0.1",
+    "mode": "staging",
+    "name": "proAngular",
+    "lang": "es",
+    "staging": {
+      "serviceUrl": "",
+      "pollInterval": "",
+      "serviceTimeout": ""
+    },
+    "production": {
+      "serviceUrl": "",
+      "pollInterval": "",
+      "serviceTimeout": ""
+    }
+  },
+  "services": {
+    "matchList": "http://mdw.prokarma.com/mockservice/serviceresponse.php?serviceurl=5c9559744cd231fbc7bc58cce2f08d26",
+  }
+}
+
+</pre>
+</li>
+<li>Jasmine unit test integrated with karma runner.</li>
+<li>code coverage for unit tests to identify untested and unused code in your application
+<img class="diagram" src="img/tutorial/code-coverage.png" width="488" height="413" alt="code coverage">    </li>
+</ul>
+</div></div>

@@ -1,0 +1,36 @@
+<h3>PPL 2014 - Match List</h3>
+
+<div class="panel panel-default" ng-repeat ="match in matchList">
+
+    <div class="panel-heading clearfix">
+        <h3 class="panel-title pull-left text-center">Match {{$index+1}}</h3>
+     </div>
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-3">
+                        
+                        <div><b>{{match.team1}}</b></div>
+                        <div><b>{{match.bat2}}</b></div>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                         <div>{{match.result}}</div>
+                         <div>{{match.mom}}</div>
+                         <div>{{match.venue}} - {{match.venue}}</div>
+                    </div>
+                     <div class="col-sm-3">
+                         
+                         <div><b>{{match.team2}}</b></div>
+                           <div><b>{{match.bat1}}</b></div> 
+                    </div>
+                    
+                </div>    
+            
+            </div>
+          
+
+          
+
+        </div>
+
+    </div>

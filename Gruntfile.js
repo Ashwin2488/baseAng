@@ -22,7 +22,15 @@ module.exports = function (grunt) {
         yeoman: {
             // configurable paths
             app: require('./bower.json').appPath || 'app',
-            dist: 'dist'
+            dist: 'dist',
+            injectorFiles:[
+                '<%= yeoman.app %>/app.js',
+                '<%= yeoman.app %>/modules/**/*.js',
+                '!<%= yeoman.app %>/modules/**/*_test.js'
+            ],
+            configModulePath:'<%= yeoman.app %>/modules/config/config-constant.js',
+            configJsonPath:'<%= yeoman.app %>/modules/config/config.json'
+          
         },
 
         // Watches files for changes and runs tasks based on the changed files
@@ -316,7 +324,7 @@ module.exports = function (grunt) {
                     endtag: '<!-- endbuild -->'
                 },
                 files: {
-                    '<%= yeoman.app %>/index.html': ['<%= yeoman.app %>/scripts/*.js', '<%= yeoman.app %>/scripts/**/*.js', '<%= yeoman.app %>/config/*.js', '!<%= yeoman.app %>/scripts/**/*_test.js'],
+                    '<%= yeoman.app %>/index.html': '<%= yeoman.injectorFiles %>'
                 }
 
             },
@@ -358,11 +366,11 @@ module.exports = function (grunt) {
         ngconstant: {
             app: {
                 options: {
-                    dest: '<%= yeoman.app %>/config/config.js',
+                    dest: '<%= yeoman.configModulePath %>',
                     name: 'pro.config',
                 },
                 constants: {
-                    PROCONFIG: grunt.file.readJSON('app/config/config.json')
+                    PROCONFIG: grunt.file.readJSON('app/modules/config/config.json')
                 },
                 values: {
                     debug: true

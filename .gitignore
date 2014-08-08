@@ -1,10 +1,7 @@
-node_modules
-dist
-.tmp
-.sass-cache
-app/bower_components
+node_modules/
+bower_components/
+*.log
 
-platforms/**/
-www
-!www/config.xml
-!www/res
+build/
+dist/
+tmp/

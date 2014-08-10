@@ -41,5 +41,21 @@ Google recommended naming conventions for angular app are as follows
 - File names should be lowercase, following the existing JS Style recommendations. HTML and css files should also be lowercase.
 
 - Unit tests should be named ending in _test.js, hence  "foo-controller_test.js" and "bar-directive_test.js"
+
+- Modules should be named with lowerCamelCase. For indicating that module b is submodule of module a you can nest 
+  them by using namespacing like: a.b
+
+- The naming of the controller is done using the controller's functionality (for example shopping cart, homepage, admin panel)
+  and the substring Ctrl in the end. The controllers are named UpperCamelCase (HomePageCtrl, ShoppingCartCtrl, AdminPanelCtrl, etc.).
+  
+- Name your directives with lowerCamelCase.Use custom prefixes for your directives to prevent name collisions with third-party libraries.
+
+- Name your filters with lowerCamelCase.
+
+- Use camelCase to name your services.
  
-For more detailed proposed structure [here](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
+For more detailed proposed structure and Best practices 
+
+[Google Style guide](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
+
+[Community Best Practises](https://github.com/mgechev/angularjs-style-guide)

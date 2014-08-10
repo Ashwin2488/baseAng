@@ -370,7 +370,7 @@ module.exports = function (grunt) {
                 }
             },
             api: {
-                src: ['<%= yeoman.app %>/scripts/**/!(*_test.js)+(*.js)','docs/content/api/*.ngdoc'],
+                src: ['<%= yeoman.app %>/modules/**/!(*_test.js)+(*.js)','<%= yeoman.app %>/app.js','docs/content/api/*.ngdoc'],
                 title: "API documentation"
             },
             guide: {

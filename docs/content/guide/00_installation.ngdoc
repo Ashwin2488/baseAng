@@ -4,39 +4,29 @@
 
 ## Quick Start
 
-To get started with yeoman generator ,you need some prerequisites to be installed.
+To get started the following prerequisites are to be installed.
 
-###Install NodeJs
+###1) Install NodeJs
 Node.js is a runtime environment and a library for running applications written in JavaScript 
 outside the browser (for example, on the server).
 
-[Download from here](http://nodejs.org/download/)
+[Download](http://nodejs.org/download/)
 
-###Install Yeoman
-Open your command prompt and type the following.
-```
-$ npm install -g yo
-```       	
-###Install [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/)
+###2) Install Git
 
-If you are using npm 1.2.10 or above, this will also automatically install 
-grunt and bower for you. If you're on an older version of npm, you will need to install them manually:
+[Download](http://git-scm.com/downloads)
+
+###3) Install [Grunt](http://gruntjs.com/) and [Bower](http://bower.io/)
 
 ```
-# For npm versions < 1.2.10.
 $ npm install -g grunt-cli bower
 ``` 
 
-###Install the yeoman proAngular generator using npm.
+###4) Clone the pro-angular-yeoman repository to your local machine
 
 ```
-$ npm install -g <pro-angular-generator.tgz>
+$ git clone https://github.com/Ashwin2488/pro-angular-yeoman.git
 ```
 
-Create a new project directory.Inside your project directory run 
-
-```
-$ yo proAngular
-```
-This will create your application skeleton with some existing sample controllers and services.
+This will create your application skeleton with some existing controllers and services.
 

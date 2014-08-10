@@ -8,7 +8,7 @@ To add a new module to your application,the things need to be done are as follow
 want to make sure everything is perfect so far and want to run your application you can skip to [Running your app](#/running_app).
 
 
-Say you are going to add a new module as `page3`
+Consider you are going to add a new module as `page3`
 
 - Create a new sub-directory as page3 inside modules folder.
 
@@ -31,7 +31,7 @@ app.css
 index.html	
 
 ```
-- Create a file called page3-controller.js.
+- Create the controller file **page3-controller.js**
   Define your module and add a controller in it.
   <pre>
 	angular.module('page3',[])
@@ -40,7 +40,7 @@ index.html
     });
 	</pre>
 	
-- Now add a template file `page3.tpl.html` with the html content for your module.
+- Now add a template file **page3.tpl.html** with the view for page3.
 	<pre>
 	<div>Page3 content</div>
 	</pre>

@@ -4,8 +4,7 @@
 
 # Folder structure
 
-After yeoman has installed all the dependencies of the project, the folder structure
-may look like below
+The folder structure of the application skeleton looks like below
 
 <img class="diagram" src="img/tutorial/folder-structure.png" width="488" height="413" alt="folder structure">
 
@@ -30,4 +29,8 @@ may look like below
 - Karma e2e testing config for integration testing.
 
 ###package.json
-- Helper file for NPM to manage your project dependency.  
+- Helper file for NPM to manage your project dependency. 
+
+###app.js
+- Defines the module that contains all your sub modules as a dependency and is assigned to your ng-app directive.
+  Also can contain manual bootstrap,config,route definitions.    

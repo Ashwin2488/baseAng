@@ -2,8 +2,8 @@
 @name Guide
 @description
 
-# Yeoman proAngular generator
-Yeoman generator for AngularJs skeleton with recommended folder structure.
+# Angular Base Skeleton
+AngularJs skeleton with recommended folder structure.
 
 ## Features
 
@@ -30,7 +30,7 @@ Yeoman generator for AngularJs skeleton with recommended folder structure.
     }
   },
   "services": {
-    "matchList": "http://mdw.prokarma.com/mockservice/serviceresponse.php?serviceurl=5c9559744cd231fbc7bc58cce2f08d26",
+    "matchList": "",
   }
 }
 

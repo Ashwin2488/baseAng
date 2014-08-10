@@ -57,7 +57,16 @@ module.exports = function (grunt) {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 },
-                files: ['<%= yeoman.app %>/{,*/}*.html', '.tmp/styles/{,*/}*.css', '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}']
+                files: ['<%= yeoman.app %>/{,*/}*.html',
+                        '.tmp/styles/{,*/}*.css',
+                        '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                        '<%= yeoman.app %>/modules/**/*.js',
+                        '!<%= yeoman.app %>/modules/**/*_test.js'
+                       ]
+            },
+            appConfig:{
+                files:['<%= yeoman.app %>/modules/config/config.json'],
+                tasks:['ngconstant:app']
             }
         },
 
@@ -111,7 +120,8 @@ module.exports = function (grunt) {
                     src: ['.tmp', '<%= yeoman.dist %>/*', '!<%= yeoman.dist %>/.git*']
     }]
             },
-            server: '.tmp'
+            server: '.tmp',
+            docs:'tmp/documentation'
         },
 
         // Add vendor prefixed styles
@@ -266,6 +276,12 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            docs:{
+                expand: true,
+                cwd:'docs',
+                dest: 'tmp/documentation/',
+                src: 'img/**/*'
             }
         },
 
@@ -345,13 +361,13 @@ module.exports = function (grunt) {
         },
         ngdocs: {
             options: {
-                dest: 'generated-docs',
-                html5Mode: false
-               /* discussions: {
-                    shortName: 'mydocs',
-                    url: 'http://docs.proangular.com',
+                dest: 'tmp/documentation',
+                html5Mode: false,
+                discussions: {
+                    shortName: 'angularskeleton',
+                    url: 'http://ashwin2488.github.io/pro-angular-yeoman',
                     dev: false
-                }*/
+                }
             },
             api: {
                 src: ['<%= yeoman.app %>/scripts/**/!(*_test.js)+(*.js)','docs/content/api/*.ngdoc'],
@@ -394,7 +410,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', ['clean:server', 'concurrent:test', 'autoprefixer', 'connect:test', 'karma']);
-    grunt.registerTask('docs', ['ngdocs']);
+    grunt.registerTask('docs', ['clean:docs','ngdocs','copy:docs']);
     grunt.registerTask('build', ['clean:dist', 'bowerInstall', 'useminPrepare', 'concurrent:dist', 'autoprefixer', 'concat', 'ngmin', 'copy:dist', 'cdnify', 'cssmin', 'uglify', 'rev', 'usemin', 'htmlmin']);
 
     grunt.registerTask('default', ['newer:jshint', 'test', 'build']);

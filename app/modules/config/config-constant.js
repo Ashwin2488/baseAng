@@ -5,17 +5,17 @@ angular.module("pro.config", [])
 	"releaseMode": "development",
 	"webServiceConfig": {
 		"development": {
-			"baseUrl": "http://mdw.prokarma.com/mockservice/serviceresponse.php?serviceurl="
+			"baseUrl": "mocks/"
 		},
 		"staging": {
-			"baseUrl": "http://mdw.prokarma.com/mockservice/serviceresponse.php?serviceurl="
+			"baseUrl": ""
 		},
 		"production": {
-			"baseUrl": "http://mdw.prokarma.com/mockservice/serviceresponse.php?serviceurl="
+			"baseUrl": ""
 		}
 	},
 	"serviceUrls": {
-		"getMatchList": "5c9559744cd231fbc7bc58cce2f08d26"
+		"getMatchList": "getMatchList.json"
 	}
 })
 

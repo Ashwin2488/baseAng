@@ -6,7 +6,7 @@
 <p>So now the project base is setup ,what about adding some extra functionalities to it.
 To add a new module to your application,the things need to be done are as follows.But if you 
 want to make sure everything is perfect so far and want to run your application you can skip to <a href="#/running_app">Running your app</a>.</p>
-<p>Say you are going to add a new module as <code>page3</code></p>
+<p>Consider you are going to add a new module as <code>page3</code></p>
 <ul>
 <li>Create a new sub-directory as page3 inside modules folder.</li>
 </ul>
@@ -27,7 +27,7 @@ app.js
 app.css
 index.html</code></pre>
 <ul>
-<li><p>Create a file called page3-controller.js.
+<li><p>Create the controller file <strong>page3-controller.js</strong>
 Define your module and add a controller in it.
 <pre class="prettyprint linenums">
 	angular.module('page3',[])
@@ -36,7 +36,7 @@ Define your module and add a controller in it.
     });
 	</pre>
 </li>
-<li><p>Now add a template file <code>page3.tpl.html</code> with the html content for your module.
+<li><p>Now add a template file <strong>page3.tpl.html</strong> with the view for page3.
   <pre class="prettyprint linenums">
 	&lt;div&gt;Page3 content&lt;/div&gt;
 	</pre>

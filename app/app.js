@@ -35,4 +35,11 @@ angular.module('proAngular', ['ngRoute', 'proAngular.home', 'proAngular.page1', 
 	$scope.isActive = function(viewLocation) {
 		return viewLocation === $location.path();
 	};
-}); 
+});
+ 
+//Manual Bootstrapping Application
+/*
+angular.element(document).ready(function () {
+  angular.bootstrap(document, ['proAngular']);
+});
+*/

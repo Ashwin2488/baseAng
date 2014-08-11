@@ -7,6 +7,7 @@ angular.module('proAngular.page2', [
            controller: 'Page2Ctrl'
         });
     })
-    .controller('Page2Ctrl', function ($scope,$rootScope) {
-          $scope.name = "new template";
+    .controller('Page2Ctrl', function ($scope,$rootScope,$location) {
+        if($rootScope.matchList === undefined)
+        	$location.path('#/home');
     });

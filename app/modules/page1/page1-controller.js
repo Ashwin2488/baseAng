@@ -7,6 +7,7 @@ angular.module('proAngular.page1', [
            controller: 'Page1Ctrl'
         });
     })
-    .controller('Page1Ctrl', function ($scope,$rootScope) {
-          
+    .controller('Page1Ctrl', function ($scope,$rootScope,$location) {
+        if($rootScope.matchList === undefined)
+        	$location.path('#/home');
     });

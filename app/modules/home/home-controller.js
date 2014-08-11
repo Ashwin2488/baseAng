@@ -27,9 +27,9 @@ angular.module('proAngular.home', [
  * 
  */
     .controller('HomeCtrl', function ($scope, $rootScope, homeService) {
-        $scope.matchList = [];
+        $rootScope.matchList = [];
         homeService.getMatchList().then(function (response) {
          
-            $scope.matchList = response.data.matchesList;
+            $rootScope.matchList = response.data.matchesList;
         });
     });

@@ -1,0 +1,36 @@
+@ngdoc overview
+@name Folder structure
+@description
+
+# Folder structure
+
+The folder structure of the application skeleton looks like below
+
+<img class="diagram" src="img/tutorial/folder-structure.png" width="488" height="413" alt="folder structure">
+
+###app
+- This is your application folder that contains all  assets like scripts,styles and images.
+- Mostly you will have to modify only the files and folder inside this directory 
+  were you will spent most of your time in developing.	
+  
+###node_modules
+- Application dependent node modules that are required in the development stage to run grunt ,karma ,etc.
+
+###bower.json
+- Bower configuration file containing the list of front-end frameworks used by your application.
+
+###Gruntfile.js
+- One of the important file to make your build process easy and efficient 
+
+###karma.conf.js
+- Karma configuration file to run your unit tests.
+
+###karma-e2e.conf.js
+- Karma e2e testing config for integration testing.
+
+###package.json
+- Helper file for NPM to manage your project dependency. 
+
+###app.js
+- Defines the module that contains all your sub modules as a dependency and is assigned to your ng-app directive.
+  Also can contain manual bootstrap,config,route definitions.    

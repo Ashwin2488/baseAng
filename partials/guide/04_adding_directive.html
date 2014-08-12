@@ -1,0 +1,54 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="adding-a-directive-page"><h2 id="directive">Directive</h2>
+<ul>
+<li>Directives is what AngularJS refers to as &quot;teaching HTML new tricks&quot;.</li>
+<li>Directives are markers on a DOM element which attach a special behavior to it.</li>
+<li>For example static HTML wont know how to create and display a modal box
+or a datepicker or a slideshow carousal.Using directives you can teach your HTML to behave with a specific functionality.</li>
+<li>Angular has some built-in directives like ng-repeat,ng-bind,ng-show,etc  </li>
+</ul>
+<p><div class="alert alert-info">
+<strong>INFO</strong>:You can relate a directive to Web Components that are going to be the future of HTML.
+(Think of your &lt;video&gt;&lt;/video&gt;,&lt;audio&gt;&lt;/audio&gt;,&lt;article&gt;&lt;/article&gt;,etc as a built-in directive of HTML 5).
+Check out the below link to have a clear idea of web components and see how you can relate them to your directive.
+</div>
+<a href="http://css-tricks.com/modular-future-web-components/">Web Components-An Insight</a></p>
+<h4 id="directive_custom-directives">Custom Directives</h4>
+<p>Some common use cases of using directives would be</p>
+<ul>
+<li>Reusable code blocks with certain functionality can be achieved by a directive</li>
+<li>Components that modify DOM or external plugins where two way data binding is to be maintained</li>
+</ul>
+<h4 id="directive_adding-a-directive">Adding a Directive</h4>
+<p>A very basic directive would look like below</p>
+<pre class="prettyprint linenums">
+	angular.module('utils.helloWorld',[])
+	.directive('proHelloWorld', function() {
+    return {
+    restrict: 'AEC',
+    replace: 'true',
+    template: '&lt;h3&gt;Hello World!!&lt;/h3&gt;'
+    };
+});
+</pre>
+<p>Then in your HTML</p>
+<pre class="prettyprint linenums">
+    &lt;pro-hello-world&gt;&lt;/pro-hello-world&gt;
+</pre>
+<p>The output would look like below</p>
+<h4 id="directive_-hello-world">
+    Hello World!!
+</h4>
+
+<h4 id="directive_ways-of-using-a-directive">Ways of using a Directive</h4>
+<p>Directive can be used either as a element itself or as an attribute or as an comment</p>
+<ul>
+<li>A new HTML element (&lt;pro-hello-world&gt;&lt;/pro-hello-world&gt;).</li>
+<li>An attribute on an element (&lt;div pro-hello-world/&gt;).</li>
+<li>As a class (&lt;div class=&quot;pro-hello-world&quot;/&gt;).</li>
+<li>As comment (&lt;!--directive:date-pro-hello-world--&gt;).</li>
+</ul>
+</div></div>

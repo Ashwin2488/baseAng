@@ -1,0 +1,40 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="adding-a-filter-page"><h2 id="filters">Filters</h2>
+<p>A filter formats the value of an expression for display to the user. 
+They can be used in view templates, controllers or services.</p>
+<h4 id="filters_using-filters-in-view">Using Filters in view</h4>
+<p>Filters can be applied to expressions in view templates using the following syntax:</p>
+<pre class="prettyprint linenums">
+{{ expression | filter }}
+</pre>
+<h4 id="filters_creating-custom-filters">Creating custom filters</h4>
+<p>The following is an example from angular docs</p>
+<pre class="prettyprint linenums">
+angular.module('util.reverseFilter', [])
+  .filter('reverse', function() {
+    return function(input, uppercase) {
+      input = input || '';
+      var out = "";
+      for (var i = 0; i &lt; input.length; i++) {
+        out = input.charAt(i) + out;
+      }
+      // conditional based on optional argument
+      if (uppercase) {
+        out = out.toUpperCase();
+      }
+      return out;
+    };
+  })
+</pre>
+<p>Usage</p>
+<pre class="prettyprint linenums">
+  Reverse: {{'sometext'|reverse}}&lt;br&gt;
+  Reverse + uppercase: {{'sometext'|reverse:true}}&lt;br&gt;
+</pre>
+<p>Output</p>
+<p>Reverse: txetemos<br>
+Reverse + uppercase: TXETEMOS</p>
+</div></div>

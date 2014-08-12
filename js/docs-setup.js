@@ -84,7 +84,39 @@ NG_DOCS={
       "moduleName": "Adding a Module",
       "shortDescription": "Adding a new Module",
       "keywords": "$rootscope $routeprovider action add adding alert alert-info angular app application automatically base called class config configure consider content controller create creating css define destination extra file files folder function functionalities going grunt guide home-controller home-controller_test home-service html http injector inside js module modules navigate overview page1 page1ctrl page2 page3 page3-controller page3ctrl perfect project route running scripts setup skip sub-directory task template templateurl things tpl url view"
-    }
+    },
+    {
+      "section": "guide",
+      "id": "04_adding_directive",
+      "shortName": "Adding a Directive",
+      "type": "overview",
+      "moduleName": "Adding a Directive",
+      "shortDescription": "Adding a new Directive"
+      },
+    {
+      "section": "guide",
+      "id": "05_adding_filter",
+      "shortName": "Adding a Filter",
+      "type": "overview",
+      "moduleName": "Adding a Filter",
+      "shortDescription": "Adding a new Filter"
+      },
+    {
+      "section": "guide",
+      "id": "06_running_app",
+      "shortName": "Running App",
+      "type": "overview",
+      "moduleName": "Running App",
+      "shortDescription": "Running App"
+      },
+    {
+      "section": "guide",
+      "id": "07_roadmap",
+      "shortName": "RoadMap",
+      "type": "overview",
+      "moduleName": "RoadMap",
+      "shortDescription": "RoadMap"
+      }
   ],
   "apis": {
     "api": true,

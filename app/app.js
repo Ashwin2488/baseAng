@@ -13,30 +13,37 @@
  */
 'use strict';
 
-angular.module('proAngular', ['ngRoute', 'proAngular.home', 'proAngular.page1', 'proAngular.page2']).config(function($routeProvider) {
-	$routeProvider.otherwise({
-		redirectTo : '/home'
-	});
-}).controller('RootCtrl', function($scope, $location) {
-	$scope.$on("$routeChangeSuccess", function(event, current, previous) {
-		console.log('current', current);
-		console.log('previous', previous);
-	});
-	/**
-	 * @ngdoc function
-	 * @name proAngular.controller:RootCtrl#isActive
-	 * @methodOf proAngular.controller:RootCtrl
-	 *
-	 * @description
-	 * Checks if the link is active link.
-	 * 
-	 * @param {string} viewLocation URL fragment identifier
-	 * */
-	$scope.isActive = function(viewLocation) {
-		return viewLocation === $location.path();
-	};
-});
- 
+angular.module('proAngular', [
+  'ngRoute',
+  'home',
+  'page1',
+  'page2'
+])
+  .config(function ($routeProvider) {
+    $routeProvider.otherwise({
+      redirectTo: '/home'
+    });
+  })
+  .controller('RootCtrl', function ($scope, $location) {
+    /*$scope.$on("$routeChangeSuccess", function(event, current, previous) {
+    console.log('current', current);
+    console.log('previous', previous);
+  });*/
+    /**
+     * @ngdoc function
+     * @name proAngular.controller:RootCtrl#isActive
+     * @methodOf proAngular.controller:RootCtrl
+     *
+     * @description
+     * Checks if the link is active link.
+     *
+     * @param {string} viewLocation URL fragment identifier
+     * */
+    $scope.isActive = function (viewLocation) {
+      return viewLocation === $location.path();
+    };
+  });
+
 //Manual Bootstrapping Application
 /*
 angular.element(document).ready(function () {

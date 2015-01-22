@@ -1,24 +1,22 @@
-angular.module("pro.config", [])
+angular.module("config", [])
 
 .constant("PROCONFIG", {
-	"appVersion": "0.0.1",
-	"releaseMode": "development",
-	"webServiceConfig": {
-		"development": {
-			"baseUrl": "mocks/"
-		},
-		"staging": {
-			"baseUrl": ""
-		},
-		"production": {
-			"baseUrl": ""
-		}
-	},
-	"serviceUrls": {
-		"getMatchList": "getMatchList.json"
-	}
+  "appVersion": "0.0.1",
+  "releaseMode": "development",
+  "webServiceConfig": {
+    "development": {
+      "baseUrl": "mocks/"
+    },
+    "staging": {
+      "baseUrl": ""
+    },
+    "production": {
+      "baseUrl": ""
+    }
+  },
+  "serviceUrls": {
+    "getMatchList": "getMatchList.json"
+  }
 })
 
-.value("debug", true)
-
-;
+.value("debug", true);
